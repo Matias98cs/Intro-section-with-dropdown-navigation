@@ -1,0 +1,511 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: hsl(0, 0%, 98%);
+    font-size: 18px;
+    font-family: 'Epilogue', sans-serif;
+
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+}
+
+/* --------------------- Navbar ---------------------------*/
+
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5em;
+    gap: 3em;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    display: flex;
+}
+
+.nav-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+
+}
+
+.nav-navigation a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+
+}
+
+.nav-navigation a:hover {
+    color: hsl(0, 0%, 41%);
+}
+
+.nav-navigation div > i {    
+    font-size: 12px;
+}
+
+.nav-log-reg {
+    display: flex;
+    gap: 2em;
+}
+
+.nav-log-reg button {
+    border: none;
+    cursor: pointer;
+
+}
+
+#btn-two {
+    border: 1px solid black;
+    padding: 15px 25px  15px 25px;
+    border-radius: 12px;
+}
+
+#btn-two:hover {
+    background-color: black;
+    color: white;
+}
+
+
+/* --------------------- Home ---------------------------*/
+
+.home-conteiner {
+    display: grid;
+    grid-template-columns: 600px 600px;
+    justify-content: center;
+    align-items: center;
+    padding: 5em;
+
+}
+
+
+
+
+.home-col-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start ;
+    height: 100%;
+
+}
+.title-col-1 h1 {
+    font-size:  80px;
+
+}
+
+.text-col-1 {
+    width: 400px;
+    line-height: 22px;
+}
+
+.text-col-1 p {
+    font-size: 20px;
+    color: hsl(0, 0%, 41%);
+}
+
+
+.btn-col-1 button {
+    border: 1px solid black;
+    padding: 18px 25px  18px 25px;
+    border-radius: 12px;
+    text-align: center;
+    cursor: pointer;
+
+}
+
+.btn-col-1 button:hover {
+    background-color: black;
+    color: white;
+}
+
+.home-col-2 img {
+    max-width: 100%;
+}
+
+#hero-two {
+    display: none;
+}
+
+.home-col-2 {
+    width: 500px;
+}
+
+.logos-conteiner-col-1 {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5em;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+
+
+label:hover {
+    color: hsl(0, 0%, 41%);
+}
+
+
+.toggle {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    height: 180px;
+    width: 180px;
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.2em;
+    border-radius: 10px;
+    position: fixed;
+    text-align: center;
+    padding: 1em;
+    margin-top: 1em;
+}
+
+
+
+.toggle a {
+    display: flex;
+    gap: 1em;
+    text-align: center;
+    align-items: center;
+}
+
+.menu-toggle:checked+.toggle {
+    color: hsl(0, 0%, 41%);
+    display: flex;
+}
+ 
+
+.menu-toggle-2 {
+    display: none;
+}
+
+.toggle-2 {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    height: 150px;
+    width: 150px;
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.2em;
+    border-radius: 10px;
+    position: fixed;
+    text-align: center;
+    padding: 1em;
+    margin-top: 1em;
+}
+
+.toggle-2 a {
+    display: flex;
+    gap: 1em;
+    text-align: center;
+    align-items: center;
+}
+
+
+
+.menu-toggle-2:checked+.toggle-2 {
+    display: flex;
+}
+
+.menu-hambur {
+    display: none;
+}
+
+
+@media (max-width: 375px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    nav {
+        display: flex;
+        flex-direction: row;
+        height: 100px;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        padding: 1em;
+        gap: 0;
+    }
+
+    .logo img {
+        width: 100px;
+    }
+
+    .nav-container {
+        display: none;
+    }
+
+    .menu-hambur {
+        display: block;
+    }
+    .icono-menu {
+        position: relative;
+        z-index: 10;
+        cursor: pointer;
+    }
+    .icono-menu i {
+        font-size: 25px;
+    }
+
+    .cont-menu-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 5em;
+    }
+
+    .show {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: 200px;
+    }
+
+    .features {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+    }
+
+    #features {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #company {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+
+    #features i {
+        font-size: 12px;
+    }
+
+    #company i {
+        font-size: 12px;
+    }
+
+    #featuresConteiner  a {
+        padding-left: 3em;
+    }
+
+    #companyContainer a {
+        padding-left: 3em;
+    }
+
+    .company {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+
+
+    .cont-menu {
+        display: flex;
+        height: 100vh;
+        justify-content:flex-end;
+        position: fixed;
+        top: 0;
+        right: 0;
+        transition: all .5s ease;
+    }
+    .active {
+        transform: translate(800px);
+    }
+    .opacity {
+        transition: all .5s ease;
+    }
+    .cont-menu {
+        display: flex;
+        height: 100vh;
+
+    }
+
+
+    .cont-menu div a {
+        display: flex;
+        gap: 1em;
+        color: hsl(0, 0%, 41%);
+        font-size: 15px;
+        text-decoration: none;
+        position: relative;
+        cursor: pointer;
+        padding: 1em;
+        width: 220px;
+    }
+
+
+    .cont-menu div > a:hover {
+        color: black;
+    }
+
+    .cont-menu-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding-top: 0;
+    }
+
+    .cont-menu-btn div > button:hover {
+        color: black;
+    }
+
+    .cont-menu-btn div {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        width: 170px;
+        padding-top: 0;
+        
+    }
+
+    .cont-menu-btn button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid hsl(0, 0%, 41%);
+        padding: 15px 25px  15px 25px;
+        border-radius: 12px;
+        color: hsl(0, 0%, 41%);
+        width: 100%;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    #btn-menu {
+        border: none;
+    }
+
+    .home-conteiner {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        gap: 4em;
+
+    }
+
+    #hero-one {
+        display: none;
+    }
+    
+    #hero-two {
+        display: flex;
+    }
+
+    .home-col-1 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+    }
+    .title-col-1 {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        align-items: center;
+
+    }
+
+    .title-col-1 h1 {
+        font-size: 35px;
+
+    }
+
+    .title-col-1 br {
+        display: none;
+    }
+
+    .text-col-1 {
+        display: flex;
+        width: 350px;
+    }
+
+    .text-col-1 p {
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .btn-col-1 {
+        padding-top: 1em;
+    }
+
+    .btn-col-1 button {
+        background-color: black;
+        color: white;
+        padding: 15px 20px  15px 20px;
+
+    }
+
+    .btn-col-1 button:hover {
+        background-color: white;
+        color: black;
+    }
+
+    .logos-conteiner-col-1 {
+        padding-top: 3em;
+    }
+
+
+
+    .logos-conteiner-col-1 div > img {
+        width: 65px;
+    }
+
+
+    .home-col-2 {
+        width: 375px;
+    }
+
+    .home-col-2 img{
+        width: 100%;
+
+    }
+
+
+
+}
