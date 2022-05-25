@@ -171,6 +171,8 @@ label:hover {
 }
 
 
+
+
 .toggle {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
     height: 180px;
@@ -183,7 +185,7 @@ label:hover {
     position: fixed;
     text-align: center;
     padding: 1em;
-    margin-top: 1em;
+    margin-top:1em;
 }
 
 
@@ -235,6 +237,300 @@ label:hover {
 
 .menu-hambur {
     display: none;
+}
+
+/* -------------- RESPONSIVE -------------------- */
+
+@media (max-width: 768px) {
+    body {
+        display: flex;
+        align-items: center;
+        height: 100vh;
+    }
+
+    nav {
+        display: flex;
+        text-align: center;
+        flex: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .nav-container {
+        display: none;
+    }
+
+    .menu-hambur {
+        display: block;
+    }
+    .icono-menu {
+        position: relative;
+        z-index: 10;
+        cursor: pointer;
+    }
+    .icono-menu i {
+        font-size: 25px;
+    }
+
+    .cont-menu-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 5em;
+    }
+
+    .show {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: 200px;
+    }
+
+    .features {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+    }
+
+    #features {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #company {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+
+    #features i {
+        font-size: 12px;
+    }
+
+    #company i {
+        font-size: 12px;
+    }
+
+    #featuresConteiner  a {
+        padding-left: 3em;
+    }
+
+    #companyContainer a {
+        padding-left: 3em;
+    }
+
+    .company {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .cont-menu {
+        display: flex;
+        height: 100vh;
+        justify-content:flex-end;
+        position: fixed;
+        top: 0;
+        right: 0;
+        transition: all .5s ease;
+    }
+    .active {
+        transform: translate(800px);
+    }
+    .opacity {
+        transition: all .5s ease;
+    }
+    .cont-menu {
+        display: flex;
+        height: 100vh;
+
+    }
+
+
+    .cont-menu div a {
+        display: flex;
+        gap: 1em;
+        color: hsl(0, 0%, 41%);
+        font-size: 15px;
+        text-decoration: none;
+        position: relative;
+        cursor: pointer;
+        padding: 1em;
+        width: 300px;
+    }
+
+
+    .cont-menu div > a:hover {
+        color: black;
+    }
+
+    .cont-menu-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding-top: 0;
+    }
+
+    .cont-menu-btn div > button:hover {
+        color: black;
+    }
+
+    .cont-menu-btn div {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        width: 170px;
+        padding-top: 0;
+        
+    }
+
+    .cont-menu-btn button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid hsl(0, 0%, 41%);
+        padding: 15px 25px  15px 25px;
+        border-radius: 12px;
+        color: hsl(0, 0%, 41%);
+        width: 100%;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    #btn-menu {
+        border: none;
+    }
+
+    .home-conteiner {
+        display: grid;
+        grid-template-columns: 400px 1fr;
+        flex-direction: row;
+        padding:2em;
+    }
+
+    .home-col-1 {
+        display: flex;
+        gap: 1em;
+    }
+
+    .title-col-1 h1 {
+        font-size: 50px;
+        font-weight: 700;
+
+    }
+
+    .text-col-1 p {
+        font-size: 14px;
+    }
+
+    .home-col-2 {
+        width: auto;
+    }
+
+    .home-col-2 img {
+        max-width: 100%;
+    }
+
+    .btn-col-1 button {
+        border: 1px solid black;
+        padding: 15px 15px 15px 15px;
+        border-radius: 12px;
+        text-align: center;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: bold;
+    
+    }
+
+    .logos-conteiner-col-1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 568px) {
+
+    .home-conteiner {
+        display: grid;
+        margin-top: 2em;
+        grid-template-columns: 200px 200px;
+        padding: 1em;
+        gap:1em;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .home-col-1 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+    }
+
+    .title-col-1 h1 {
+        font-size: 27px;
+    }
+    .text-col-1 p {
+        font-size: 12px;
+        width: 200px;
+    }
+
+    .logos-conteiner-col-1 {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
+}
+
+
+@media (max-width: 414px) {
+
+    .home-conteiner {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        padding: 0;
+        gap: 2em;
+    }
+
+    .home-col-1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .title-col-1 h1 {
+        text-align: center;
+        font-size: 44px;
+    }
+
+    br {
+        display: none;
+    }
+
+    .text-col-1 {
+        display: flex;
+        justify-content:center;
+        align-items: center;
+    }
+    .text-col-1 p {
+        text-align: center;
+        width: 300px;
+    }
 }
 
 
@@ -462,7 +758,8 @@ label:hover {
 
     .text-col-1 {
         display: flex;
-        width: 350px;
+        justify-content: center;
+        align-items: center;
     }
 
     .text-col-1 p {
@@ -493,7 +790,7 @@ label:hover {
 
 
     .logos-conteiner-col-1 div > img {
-        width: 65px;
+        width: 75px;
     }
 
 
